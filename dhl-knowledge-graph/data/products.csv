@@ -1,0 +1,11 @@
+product_id,name,hs_code,category
+PROD-001,Semiconductor Component,8541,Electronics
+PROD-002,Medical Diagnostic Kit,3822,Healthcare
+PROD-003,Cotton Apparel,6203,Apparel
+PROD-004,Automotive Sensor,9031,Automotive
+PROD-005,Solar Inverter,8504,Energy
+PROD-006,Laboratory Microscope,9011,Scientific
+PROD-007,Packaged Food Sample,2106,Food
+PROD-008,Wireless Router,8517,Electronics
+PROD-009,Industrial Valve,8481,Industrial
+PROD-010,Camera Lens,9002,Optics

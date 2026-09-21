@@ -1,0 +1,9 @@
+customer_id,name,industry,risk_tier
+CUST-001,TechCorp Singapore,Technology,MEDIUM
+CUST-002,MedSupply Asia,Healthcare,LOW
+CUST-003,FashionHub London,Retail,MEDIUM
+CUST-004,AutoParts Japan,Automotive,LOW
+CUST-005,GreenEnergy Australia,Energy,MEDIUM
+CUST-006,Precision Labs Germany,Scientific,LOW
+CUST-007,Pacific Foods Singapore,Food,MEDIUM
+CUST-008,US Retail Systems,Retail,HIGH

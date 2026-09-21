@@ -1,0 +1,10 @@
+CREATE CONSTRAINT shipment_id IF NOT EXISTS FOR (n:Shipment) REQUIRE n.shipment_id IS UNIQUE;
+CREATE CONSTRAINT customer_id IF NOT EXISTS FOR (n:Customer) REQUIRE n.customer_id IS UNIQUE;
+CREATE CONSTRAINT product_id IF NOT EXISTS FOR (n:Product) REQUIRE n.product_id IS UNIQUE;
+CREATE CONSTRAINT hs_code IF NOT EXISTS FOR (n:HSCode) REQUIRE n.code IS UNIQUE;
+CREATE CONSTRAINT country_code IF NOT EXISTS FOR (n:Country) REQUIRE n.code IS UNIQUE;
+CREATE CONSTRAINT customs_rule_id IF NOT EXISTS FOR (n:CustomsRule) REQUIRE n.rule_id IS UNIQUE;
+CREATE CONSTRAINT customs_case_id IF NOT EXISTS FOR (n:CustomsCase) REQUIRE n.case_id IS UNIQUE;
+CREATE CONSTRAINT event_id IF NOT EXISTS FOR (n:ShipmentEvent) REQUIRE n.event_id IS UNIQUE;
+CREATE CONSTRAINT document_id IF NOT EXISTS FOR (n:Document) REQUIRE n.document_id IS UNIQUE;
+CREATE CONSTRAINT resolution_id IF NOT EXISTS FOR (n:Resolution) REQUIRE n.resolution_id IS UNIQUE;

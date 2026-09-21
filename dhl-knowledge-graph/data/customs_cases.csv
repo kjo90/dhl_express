@@ -1,0 +1,21 @@
+case_id,product_id,country_code,issue,resolution_id,resolution,outcome,clearance_days
+CASE-001,PROD-001,DE,Missing product specification,RES-001,Customer provided technical specification,CLEARED,3
+CASE-002,PROD-001,DE,HS classification verification,RES-002,Additional classification evidence,CLEARED,5
+CASE-003,PROD-001,DE,Missing supporting document,RES-003,Document submitted,CLEARED,4
+CASE-004,PROD-002,US,Incomplete diagnostic declaration,RES-004,Customer submitted declaration,CLEARED,2
+CASE-005,PROD-003,GB,Textile composition unclear,RES-005,Composition statement supplied,CLEARED,3
+CASE-006,PROD-004,AU,Calibration evidence missing,RES-006,Certificate uploaded,CLEARED,4
+CASE-007,PROD-005,DE,Conformity statement absent,RES-007,Conformity statement provided,CLEARED,5
+CASE-008,PROD-006,DE,End-use evidence needed,RES-008,End-use declaration submitted,CLEARED,3
+CASE-009,PROD-007,JP,Ingredient details incomplete,RES-009,Ingredient list submitted,CLEARED,2
+CASE-010,PROD-008,JP,Radio equipment evidence missing,RES-010,Radio statement submitted,CLEARED,4
+CASE-011,PROD-009,US,Material details requested,RES-011,Material specification supplied,CLEARED,2
+CASE-012,PROD-010,DE,Invoice description ambiguous,RES-012,Invoice corrected,CLEARED,2
+CASE-013,PROD-001,JP,Classification verification,RES-013,Classification evidence submitted,CLEARED,3
+CASE-014,PROD-002,SG,Product description incomplete,RES-014,Product description clarified,CLEARED,1
+CASE-015,PROD-003,AU,Country of origin check,RES-015,Origin declaration provided,CLEARED,2
+CASE-016,PROD-004,SG,Value support requested,RES-016,Commercial invoice supplied,CLEARED,2
+CASE-017,PROD-005,AU,Technical document review,RES-017,Technical document submitted,CLEARED,3
+CASE-018,PROD-006,US,Product purpose review,RES-018,End-use explanation provided,CLEARED,4
+CASE-019,PROD-008,GB,Device description unclear,RES-019,Technical description supplied,CLEARED,2
+CASE-020,PROD-009,DE,HS code verification,RES-020,HS evidence provided,CLEARED,3

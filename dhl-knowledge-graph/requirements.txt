@@ -1,0 +1,9 @@
+neo4j>=5.20,<6
+pandas>=2.2,<3
+pytest>=8.0,<9
+chromadb>=1.0,<2
+sentence-transformers>=3.0,<6
+scikit-learn>=1.5,<2
+streamlit>=1.40,<2
+openai>=1.0,<3
+streamlit-agraph>=0.0.45,<0.1
