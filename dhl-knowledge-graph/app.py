@@ -274,11 +274,11 @@ if analysis:
     graph = analysis["graph_context"]
     st.subheader("Decision snapshot")
     a, b, c, d = st.columns(4)
-    a.metric("Synthetic risk band", risk["risk_band"])
-    b.metric("Synthetic probability", f"{risk['synthetic_delay_risk_probability']:.1%}")
-    c.metric("Applicable requirements", len(graph["applicable_customs_rules"]))
-    d.metric("Similar synthetic cases", len(graph["historical_similar_cases"]))
-    st.progress(risk["synthetic_delay_risk_probability"], text="Synthetic delay-risk score — demonstration only")
+    a.metric("Risk band", risk["risk_band"])
+    b.metric("Delay Risk Probability", f"{risk['synthetic_delay_risk_probability']:.1%}")
+    c.metric("Applicable Custom Rules", len(graph["applicable_customs_rules"]))
+    d.metric("Similar Cases", len(graph["historical_similar_cases"]))
+    st.progress(risk["synthetic_delay_risk_probability"], text="Delay-risk score — demonstration only")
 
     explanation = deterministic_explanation(analysis)
     st.subheader(explanation["headline"])
@@ -289,7 +289,7 @@ if analysis:
         for driver in explanation["risk_drivers"]:
             st.write(f"• {driver}")
     with y:
-        st.markdown("**Synthetic triage steps**")
+        st.markdown("**Triage steps**")
         for next_step in explanation["synthetic_next_steps"]:
             st.write(f"• {next_step}")
 

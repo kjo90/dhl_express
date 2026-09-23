@@ -19,10 +19,10 @@ def deterministic_explanation(analysis: dict) -> dict:
     case_issues = [case["issue"] for case in graph["historical_similar_cases"]]
     vector_titles = [doc["metadata"]["title"] for doc in analysis["retrieved_synthetic_documents"]]
     return {
-        "headline": f"Synthetic {risk['risk_band'].lower()}-risk triage for {shipment['shipment_id']}",
+        "headline": f"{risk['risk_band'].lower()}-risk triage for {shipment['shipment_id']}",
         "summary": (
             f"{product['name']} (HS {product['hs_code']}) is travelling to {destination['name']} with status "
-            f"{shipment['status']}. The synthetic model returned {risk['synthetic_delay_risk_probability']:.1%}."
+            f"{shipment['status']}. The model returned {risk['synthetic_delay_risk_probability']:.1%}. delay risk probability"
         ),
         "risk_drivers": factors or ["No positive synthetic model contributions were identified."],
         "graph_evidence": {

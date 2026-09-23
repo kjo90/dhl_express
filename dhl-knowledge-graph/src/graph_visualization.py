@@ -89,5 +89,7 @@ def graph_context_explanation(context: dict) -> str:
         sentences.append(f"The connected synthetic customs rules require: {', '.join(documents)}.")
     if issues:
         sentences.append(f"Related synthetic historical cases recorded: {', '.join(issues)}.")
-    sentences.append("Potential synthetic triage action: review the connected evidence before operational follow-up; this is not customs or DHL policy.")
+    sentences.append("Potential triage action: review the connected evidence before operational follow-up;\n " \
+    "DISCLAIMER: This is not customs or DHL policy.")
+
     return " ".join(sentences)
