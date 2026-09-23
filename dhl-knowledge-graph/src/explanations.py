@@ -33,7 +33,7 @@ def deterministic_explanation(analysis: dict) -> dict:
         "synthetic_next_steps": (
             [f"Review availability of: {', '.join(rule_documents)}."] if rule_documents else []
         ) + ([f"Compare supporting evidence against prior issue: {case_issues[0]}. "] if case_issues else []) + [
-            "Use the retrieved synthetic documents as a triage checklist; do not treat them as customs or DHL policy."
+            "Use the retrieved documents as a triage checklist."
         ],
         "disclaimer": "Deterministic explanation derived only from synthetic graph, vector, and model evidence.",
     }

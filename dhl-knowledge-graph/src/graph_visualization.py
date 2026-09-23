@@ -86,10 +86,9 @@ def graph_context_explanation(context: dict) -> str:
         f"Its current shipment status is {shipment['status']}; connected events are {', '.join(event_types) or 'not recorded'}.",
     ]
     if documents:
-        sentences.append(f"The connected synthetic customs rules require: {', '.join(documents)}.")
+        sentences.append(f"The connected customs rules require: {', '.join(documents)}.")
     if issues:
-        sentences.append(f"Related synthetic historical cases recorded: {', '.join(issues)}.")
-    sentences.append("Potential triage action: review the connected evidence before operational follow-up;\n " \
-    "DISCLAIMER: This is not customs or DHL policy.")
+        sentences.append(f"Related historical cases recorded: {', '.join(issues)}.")
+    sentences.append("Potential triage action: review the connected evidence before operational follow-up.")
 
     return " ".join(sentences)

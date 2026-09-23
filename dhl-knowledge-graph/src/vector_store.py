@@ -73,5 +73,5 @@ def graph_context_to_search_query(context: dict) -> str:
     issues = "; ".join(case["issue"] for case in context["historical_similar_cases"])
     return (
         f"{product['name']} HS {product['hs_code']} destination {destination['name']}. "
-        f"Applicable synthetic requirements: {rules}. Historical synthetic issues: {issues}."
+        f"Applicable requirements: {rules}. Historical issues: {issues}."
     )

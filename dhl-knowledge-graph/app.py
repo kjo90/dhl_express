@@ -21,7 +21,7 @@ NODE_COLORS = {
     "Resolution": "#15803D", "ShipmentEvent": "#0369A1",
 }
 
-st.set_page_config(page_title="Synthetic Customs Risk Triage", page_icon="✈️", layout="wide")
+st.set_page_config(page_title="Customs Risk Triage", page_icon="✈️", layout="wide")
 st.markdown("""<style>
     .block-container {max-width: 1200px; padding-top: 2rem;}
     [data-testid="stMetricValue"] {color: #d40511;}
@@ -295,7 +295,7 @@ if analysis:
 
     run_llm = st.session_state.get("last_analysis_use_llm", False)
     if run_llm:
-        with st.spinner("Creating optional LLM summary from synthetic evidence…"):
+        with st.spinner("Creating optional LLM summary from evidence…"):
             try:
                 st.subheader("Optional LLM explanation")
                 llm_api_key = st.session_state.get("last_analysis_api_key")
@@ -307,7 +307,7 @@ if analysis:
     with st.expander("Inspect graph context and model inputs"):
         st.json({"graph_context": graph, "model": risk, "vector_search_query": analysis["vector_search_query"]})
 else:
-    st.info("Choose a synthetic shipment and click **Analyze shipment**. The default path requires only local Neo4j, ChromaDB, and the synthetic model.")
+    st.info("Choose a shipment and click **Analyze shipment**. The default path requires only local Neo4j, ChromaDB, and the synthetic model.")
 
 st.divider()
 render_knowledge_graph_explorer(shipment_id)

@@ -1,11 +1,11 @@
 rule_id,country_code,hs_code,rule_name,description,document_id,document_name,risk_level
-RULE-001,DE,8541,Technical specification required,Synthetic rule: semiconductor consignments need a technical product specification,DOC-001,Technical Specification,HIGH
-RULE-002,DE,8541,Classification evidence required,Synthetic rule: classification evidence may be requested for HS verification,DOC-002,HS Classification Evidence,HIGH
-RULE-003,DE,8504,Electrical conformity statement,Synthetic rule: electrical equipment needs a conformity statement,DOC-003,Conformity Statement,MEDIUM
-RULE-004,US,3822,Diagnostic product declaration,Synthetic rule: diagnostic kits require a product declaration,DOC-004,Product Declaration,MEDIUM
-RULE-005,GB,6203,Textile composition statement,Synthetic rule: apparel requires a textile composition statement,DOC-005,Composition Statement,LOW
-RULE-006,AU,9031,Calibration certificate,Synthetic rule: precision sensors require calibration evidence,DOC-006,Calibration Certificate,MEDIUM
-RULE-007,JP,2106,Ingredient list,Synthetic rule: food samples require an ingredient list,DOC-007,Ingredient List,HIGH
-RULE-008,DE,9011,End-use declaration,Synthetic rule: laboratory optics require an end-use declaration,DOC-008,End-use Declaration,MEDIUM
-RULE-009,US,8481,Material specification,Synthetic rule: industrial valves require a material specification,DOC-009,Material Specification,LOW
-RULE-010,JP,8517,Radio equipment statement,Synthetic rule: wireless devices require a radio equipment statement,DOC-010,Radio Equipment Statement,HIGH
+RULE-001,DE,8541,Technical specification required,Rule: semiconductor consignments need a technical product specification,DOC-001,Technical Specification,HIGH
+RULE-002,DE,8541,Classification evidence required,Rule: classification evidence may be requested for HS verification,DOC-002,HS Classification Evidence,HIGH
+RULE-003,DE,8504,Electrical conformity statement,Rule:electrical equipment needs a conformity statement,DOC-003,Conformity Statement,MEDIUM
+RULE-004,US,3822,Diagnostic product declaration,Rule: diagnostic kits require a product declaration,DOC-004,Product Declaration,MEDIUM
+RULE-005,GB,6203,Textile composition statement,Rule: apparel requires a textile composition statement,DOC-005,Composition Statement,LOW
+RULE-006,AU,9031,Calibration certificate,Rule: precision sensors require calibration evidence,DOC-006,Calibration Certificate,MEDIUM
+RULE-007,JP,2106,Ingredient list,Rule: food samples require an ingredient list,DOC-007,Ingredient List,HIGH
+RULE-008,DE,9011,End-use declaration,Rule: laboratory optics require an end-use declaration,DOC-008,End-use Declaration,MEDIUM
+RULE-009,US,8481,Material specification,Rule: industrial valves require a material specification,DOC-009,Material Specification,LOW
+RULE-010,JP,8517,Radio equipment statement,Rule: wireless devices require a radio equipment statement,DOC-010,Radio Equipment Statement,HIGH
