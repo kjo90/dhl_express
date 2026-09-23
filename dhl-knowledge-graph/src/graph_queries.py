@@ -62,28 +62,54 @@ class DHLGraphQueries:
         """Return explainable graph evidence for customs-delay triage; no prediction is made."""
         rows = self._query("""
             MATCH (s:Shipment {shipment_id: $shipment_id})
-            CALL {
-                WITH s
+            CALL (s) {
                 MATCH (s)-[:CONTAINS]->(p:Product)-[:HAS_HS_CODE]->(h:HSCode)
                 MATCH (s)-[:SHIPPED_TO]->(destination:Country)
                 OPTIONAL MATCH (destination)-[:HAS_CUSTOMS_RULE]->(rule:CustomsRule)-[:APPLIES_TO]->(h)
                 OPTIONAL MATCH (rule)-[:REQUIRES]->(document:Document)
-                RETURN p {.*, hs_code: h.code} AS product, destination {.*} AS destination,
-                       [item IN collect(DISTINCT rule {.*, required_document: document.name}) WHERE item IS NOT NULL] AS rules
+
+                RETURN
+                    p {.*, hs_code: h.code} AS product,
+                    destination {.*} AS destination,
+                    [item IN collect(
+                        DISTINCT rule {.*, required_document: document.name}
+                    ) WHERE item IS NOT NULL] AS rules
             }
-            CALL {
-                WITH s, product, destination
-                MATCH (customs_case:CustomsCase)-[:INVOLVED_PRODUCT]->(p:Product {product_id: product.product_id})
-                MATCH (customs_case)-[:OCCURRED_IN]->(:Country {code: destination.code})
-                OPTIONAL MATCH (customs_case)-[:RESOLVED_BY]->(resolution:Resolution)
-                RETURN collect(DISTINCT customs_case {.*, resolution: resolution.description}) AS cases
+
+            CALL (s, product, destination) {
+                MATCH (customs_case:CustomsCase)
+                    -[:INVOLVED_PRODUCT]->
+                    (p:Product {product_id: product.product_id})
+
+                MATCH (customs_case)-[:OCCURRED_IN]->
+                    (:Country {code: destination.code})
+
+                OPTIONAL MATCH (customs_case)-[:RESOLVED_BY]->
+                    (resolution:Resolution)
+
+                RETURN collect(
+                    DISTINCT customs_case {
+                        .*,
+                        resolution: resolution.description
+                    }
+                ) AS cases
             }
-            CALL {
-                WITH s
+
+            CALL (s) {
                 OPTIONAL MATCH (s)-[:HAS_EVENT]->(event:ShipmentEvent)
-                RETURN collect(DISTINCT event {.*}) AS events
+
+                RETURN collect(
+                    DISTINCT event {.*}
+                ) AS events
             }
-            RETURN s {.*} AS shipment, product, destination, rules, cases, events
+
+            RETURN
+                s {.*} AS shipment,
+                product,
+                destination,
+                rules,
+                cases,
+                events
         """, shipment_id)
         if not rows:
             return None
